@@ -1,7 +1,7 @@
 import css from "./MovieModal.module.css";
-import { baseUrlImg } from "../components/MovieGrid/MovieGrid";
+import { baseUrlImg } from "../MovieGrid/MovieGrid";
 import { createPortal } from "react-dom";
-import type { Movie } from "../types/movie";
+import type { Movie } from "../../types/movie";
 import { useEffect } from "react";
 
 interface MovieGridProps {
