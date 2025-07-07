@@ -1,6 +1,6 @@
 const APIKey = import.meta.env.VITE_TMDB_TOKEN;
 import axios from "axios";
-import type { Movie } from "../../types/movie";
+import type { Movie } from "../types/movie";
 
 interface MovieHttpRequest {
   results: Movie[];
