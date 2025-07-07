@@ -4,11 +4,11 @@ import { createPortal } from "react-dom";
 import type { Movie } from "../../types/movie";
 import { useEffect } from "react";
 
-interface MovieGridProps {
+interface MovieModalProps {
     movie: Movie;
     onClose: ()=> void;
 }
-export default function MovieModal({movie, onClose}: MovieGridProps) {
+export default function MovieModal({movie, onClose}: MovieModalProps) {
 
     const handleElementClick = (event: React.MouseEvent<HTMLElement>) => {
         if (event.target === event.currentTarget) {
@@ -33,7 +33,7 @@ export default function MovieModal({movie, onClose}: MovieGridProps) {
     return createPortal(
         <div onClick={handleElementClick} className={css.backdrop} role="dialog" aria-modal="true">
             <div className={css.modal}>
-                <button onClick={handleElementClick} className={css.closeButton} aria-label="Close modal">
+                <button onClick={onClose} className={css.closeButton} aria-label="Close modal">
                     &times;
                 </button>
                 <img
